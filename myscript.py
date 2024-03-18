@@ -1,4 +1,5 @@
 import os
+import sys
 
 ## bon_commit = input("Indiquer le hash du dernier commit fonctionnel : ")
 ## mauvais_commit = input("Indiquer le hash du commit non-fonctionnel : ")
