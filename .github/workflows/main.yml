@@ -13,5 +13,10 @@ jobs:
           python-version: '3.9'
       - name: Install packages
         run: pip install -r requirements.txt
+      - name : get_commits
+        run : first_commit_hash=$(git log --pretty=format:%H --reverse | head -n 1)
+         echo "::set-output name=first_commit_hash::$first_commit_hash"
       - name: Run tests
-        run: python myscript.py test
+        run: first_commit_hash="${{ steps.get_commit_hashes.outputs.first_commit_hash }}" 
+          current_commit_hash="${{ github.sha }}"
+          python myscript.py test first_commit_hash current_commit_hash
