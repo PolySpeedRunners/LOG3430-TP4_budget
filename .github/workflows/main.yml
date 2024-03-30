@@ -14,4 +14,4 @@ jobs:
       - name: Install packages
         run: pip install -r requirements.txt
       - name: Run tests
-        run: python myscript.py test 65f9ca2972ed6e629d937833 c1a4be04b972b6c17db242fc37752ad517c29402
+        run: python myscript.py e4cfc6f77ebbe2e23550ddab682316ab4ce1c03c c1a4be04b972b6c17db242fc37752ad517c29402
